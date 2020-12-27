@@ -33,7 +33,9 @@ export const Container = styled.div`
 `;
 
 export const AsideBottom = styled(Aside.Bottom)`
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @media (max-width: 750px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 `;
