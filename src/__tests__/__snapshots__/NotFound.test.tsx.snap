@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders 1`] = `
+<DocumentFragment>
+  <nav
+    class="sc-dlfnbm fKtKuo"
+  >
+    <h1>
+      Invision
+    </h1>
+  </nav>
+  <div
+    class="sc-bdfBwQ dMvPSB"
+  >
+    <header>
+      <h1>
+        <span>
+          404
+        </span>
+         
+        <br />
+        Page Not Found
+      </h1>
+      <p>
+        Page in development, come back soon
+      </p>
+      <button
+        class="sc-gsTCUz lhzdGl"
+        color="#FFF"
+      >
+        Go to home
+      </button>
+    </header>
+    <img
+      alt="Developing page"
+      src="contruction-illustration.svg"
+    />
+  </div>
+</DocumentFragment>
+`;
