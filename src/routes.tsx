@@ -32,10 +32,10 @@ const Authenticated = ({ component: Component, ...rest }: any) => {
 const Routes = () => (
   <BrowserRouter>
     <Switch>
-      <Route path="*" component={NotFound} />
       <Route path="/auth" exact component={Login} />
       <Route path="/create-account" exact component={CreateAccount} />
       <Authenticated path="/" exact component={Home} />
+      <Route path="*" component={NotFound} />
     </Switch>
   </BrowserRouter>
 );

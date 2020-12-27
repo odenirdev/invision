@@ -1,12 +1,16 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  font-size: 2rem;
-
   h1 {
+    font-size: 3rem;
     position: absolute;
     z-index: 3;
     top: 30%;
     left: 15%;
+    text-align: center;
+
+    @media (max-width: 750px) {
+      left: 5%;
+    }
   }
 `;
