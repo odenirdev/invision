@@ -8,7 +8,7 @@ import Divider from "../../components/Divider";
 
 import GoogleLogo from "../../assets/images/google-logo.svg";
 
-import { validateEmail } from "../../modules/validate";
+import { validateEmail, validatePassword } from "../../modules/validate";
 
 import { Container } from "./styles";
 
@@ -92,18 +92,28 @@ const CreateAccount: React.FC = () => {
       }
     }
 
-    if (!data.password) {
+    if (data.password && !validatePassword(data.password)) {
       document
         .querySelector("input[name=password]")
         ?.parentElement?.classList.add("input-error");
 
-      errors.password = "Password is required!";
+      errors.password = "The password cannot be less 6 characters";
 
       response = { status: false };
     } else {
-      document
-        .querySelector("input[name=password]")
-        ?.parentElement?.classList.remove("input-error");
+      if (!data.password) {
+        document
+          .querySelector("input[name=password]")
+          ?.parentElement?.classList.add("input-error");
+
+        errors.password = "Password is required!";
+
+        response = { status: false };
+      } else {
+        document
+          .querySelector("input[name=password]")
+          ?.parentElement?.classList.remove("input-error");
+      }
     }
 
     if (!response.status) {
