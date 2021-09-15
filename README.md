@@ -1,6 +1,6 @@
 # Invision
 
-> Test application made for employment as a frontend developer
+> Project for TDD studing
 
 [check out here](https://invision-og.netlify.app/auth)
 
